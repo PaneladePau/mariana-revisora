@@ -1,0 +1,30 @@
+@mixin font($file, $name, $style, $weight, $dir, $formats) {
+
+  $src: null;
+  $hash: null;
+
+  @font-face {
+    font-family: '#{$name}';
+    @each $ext in $formats {
+      $format: $ext;
+      @if $ext == eot {
+        src: url('#{$dir}/#{$file}.#{$ext}');
+        $format: 'embedded-opentype';
+        $hash: '?#iefix';
+      } @else if $ext == svg {
+        $hash: '##{$file}';
+      } @else if $ext == ttf {
+        $format: 'truetype';
+      } else {
+        $src: $src, url('#{$dir}/#{$file}.#{$ext}#{$hash}') format('#{$format}');
+        $hash: null;
+      }
+    }
+    src: $src;
+    font-style: $style;
+    font-weight: $weight;
+  }
+};
+
+@include font('SourceSansPro-Light', 'SourceSansPro Light', normal, 400, '/resource/fonts/SourceSansPro-Light', eot ttf woff woff2);
+@include font('SourceSansPro-Bold', 'SourceSansPro Bold', normal, 400, '/resource/fonts/SourceSansPro-Bold', eot ttf woff woff2);
