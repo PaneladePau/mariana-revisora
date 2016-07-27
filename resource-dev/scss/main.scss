@@ -2,6 +2,7 @@
 @import "helpers/variables";
 @import "helpers/fonts";
 @import "helpers/timeline";
+@import "helpers/menu-mobile";
 
 * {
   box-sizing: border-box;
@@ -29,7 +30,9 @@ body {
   font-family: 'SourceSansPro Light', sans-serif;
   font-size: 16px;
   background-color: #eee;
-  min-width: 940px;
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 strong {
@@ -40,7 +43,7 @@ i {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -61,72 +64,39 @@ i {
   }
 }
 
-.header-main {
-  background: linear-gradient(45deg, $color2 0, $color1 75%);
-  width: 100%;
-  height: 420px;
-  position: relative;
-  padding-top: 70px;
-}
-
-.logo-big {
-  width: 540px;
-  height: 210px;
-  display: block;
-  background-image: url(/resource/img/logo-big.png);
-  background-size: contain;
-  font-size: 0;
-  margin: auto;
-}
-
-.main-menu {
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  background-color: rgba(0,0,0,0.2);
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
   bottom: 0;
-  ul {
-    display: block;
-    height: 100%;
-    width: 100%;
-    max-width: 940px;
-    padding: 0 20px;
-    text-align: right;
-    margin: auto;
-    li {
-      padding-left: 40px;
-      a {
-        font-size: 22px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-      }
+  left: 0;
+  width: 100%;
+  height: 100;
+  background-color: rgba(250,250,250,0.9);
+  text-align: center;
+  .vid-box {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    display: none;
+  }
+  .close-vid {
+    cursor: pointer;
+    position: absolute;
+    top: -42px;
+    right: -42px;
+    i {
+      font-size: 42px;
+      color: #ff1656;
     }
+  }
+  .modal-msg {
+    font-size: 26px;
+    color: #ff1656;
+    font-weight:bold;
   }
 }
 
-.wrap {
-  position: relative;
-  margin: auto;
-  width: 100%;
-  max-width: 940px;
-  padding: 0 20px;
-  padding-top: 60px;
-}
-
-.picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-image: url(/resource/img/mariana.jpg);
-  background-size: cover;
-  background-position-y: -30px;
-  filter: grayscale(20%);
-  filter: grayscale(20%);
-  filter: grayscale(20%);
-  border: 3px solid #e0e0e0;
-  box-shadow: inset -2px 5px 10px rgba(0,0,0,0.5);
-  position: absolute;
-  top: -140px;
-  left: 20px;
-}
+@import "screen-big";
+@import "screen-small";

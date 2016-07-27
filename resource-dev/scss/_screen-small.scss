@@ -1,0 +1,40 @@
+@media screen and (max-width: 755px) {
+
+  .header-main {
+    height: 260px;
+    padding-top: 40px;
+  }
+
+  .logo-big {
+    width: 260px;
+    height: 101px;
+    background-image: url(/resource/img/logo-small.png);
+  }
+
+  .main-menu {
+    height: 60px;
+    ul {
+      display: none;
+    }
+  }
+
+  .picture {
+    width: 150px;
+    height: 150px;
+    top: -160px;
+    left: initial;
+    position: relative;
+    margin: auto;
+  }
+
+  .main {
+    width: 100%;
+    padding: 0;
+    margin-top: -180px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+}
