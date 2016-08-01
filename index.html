@@ -48,9 +48,11 @@
 
         <li class="valign-element"><a href="#servicos">Serviços</a></li>
 
-        <li class="valign-element"><a href="#estudos">Estudos</a></li>
+        <li class="valign-element"><a href="#currículo">Currículo</a></li>
 
-        <li class="valign-element"><a href="#orcamento-e-contato">Orçamento e Contato</a></li>
+        <li class="valign-element"><a href="#orcamento">Orçamento</a></li>
+
+        <li class="valign-element"><a href="#contato">Contato</a></li>
 
       </ul>
 
@@ -120,7 +122,7 @@
           
         </li>
 
-        <li id="estudos">
+        <li id="currículo">
 
           <div class="cbp_tmicon valign-container">
 
@@ -132,7 +134,7 @@
 
           <div class="cbp_tmlabel">
 
-            <h2>Estudos</h2>
+            <h2>Currículo</h2>
 
             <ul>
 
@@ -152,27 +154,68 @@
 
         </li>
 
-        <li id="orcamento-e-contato">
+        <li id="orcamento">
 
           <div class="cbp_tmicon valign-container">
 
             <div class="valign-guide"></div>
 
-            <i class="timeline-icon valign-element" style="font-size: 26px;">chat</i>
+            <i class="timeline-icon valign-element" style="font-size: 28px;">assignment</i>
 
           </div>
 
           <div class="cbp_tmlabel">
 
-            <h2>Orçamento e Contato</h2>
+            <h2>Orçamento</h2>
 
-            <p>Solicite o seu orçamento e saiba mais sobre os serviços: </p>
-            <p>E-mail: <a href="mailto:contato@marianarevisora.com.br">contato@marianarevisora.com.br</a></p>
-            <p>Whatsapp: <a href="tel:11 97100-9130">11 97100-9130</a></p>
+            <p>Peça seu orçamento:</p>
+            
+            <form id="form-1" class="form" action="javascript:void(0)">
+
+              <input type="hidden" id="utm_source" name="utm_source" value="">
+              <input type="hidden" id="screen_size" name="screen_size" value="">
+
+              <label for="nome" class="inside">Nome</label>
+              <input type="text" name="nome" id="nome" maxlength="30" required>
+
+              <label for="email" class="inside">E-mail</label>
+              <input type="email" name="email" id="email" data-rule-cemail="true">
+
+              <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem" required></textarea>
+
+              <button type="submit">Enviar<i style="vertical-align: middle;">keyboard_arrow_right</i></button>
+
+            </form>
 
           </div>
         
+        </li>
+      
+        <li id="contato">
+
+          <div class="cbp_tmicon valign-container">
+
+            <div class="valign-guide"></div>
+
+            <i class="timeline-icon valign-element" style="font-size: 30px;">mail_outline</i>
+
+          </div>
+
+          <div class="cbp_tmlabel">
+
+            <h2>Contato</h2>
+
+            <p>Estou em São Paulo, mas atendo clientes de <strong>todo o Brasil</strong>. Entre em contato para conversarmos mais:</p>
+            <p>E-mail: <a href="mailto:contato@marianarevisora.com.br">contato@marianarevisora.com.br</a></p>
+            <p>Whatsapp: <a href="tel:11 97100-9130">11 97100-9130</a></p>
+            <p style="overflow: hidden;"><a href="https://br.linkedin.com/in/mariana-cervi-soares-02018b17" target="_blank" class="linkedin-link"><strong>Linked</strong><span class="linkedin-icon"></span></a></p>
+
+          </div>
+        
+        </li>
+
       </ul>
+
     </div>
 
   </div>
@@ -182,12 +225,22 @@
 
       <li><a href="#servicos">Serviços</a></li>
 
-      <li><a href="#estudos">Estudos</a></li>
+      <li><a href="#currículo">Currículo</a></li>
 
-      <li><a href="#orcamento-e-contato">Orçamento e Contato</a></li>
+      <li><a href="#orcamento">Orçamento</a></li>
+
+      <li><a href="#contato">Contato</a></li>
 
     </ul>
   </nav>
+
+  <div class="modal valign-container">
+
+    <div class="valign-guide"></div>
+
+    <div class="modal-msg valign-element"></div>
+    
+  </div>
 
   <script src="/resource/js/tools.js"></script>
   <script src="/resource/js/main.js"></script>

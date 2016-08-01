@@ -250,39 +250,6 @@
     padding-left: 22px;
     position: relative;
   }
-  [data-icon] {
-    &:before {
-      content: attr(data-icon);
-      font-family: 'Material Icons';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 1.2em;  /* Preferred icon size */
-      display: inline-block;
-      vertical-align: middle;
-      width: 1em;
-      height: 1em;
-      line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
-      position: absolute;
-      left: 0;
-      top: 14px;
-
-      /* Support for all WebKit browsers. */
-      -webkit-font-smoothing: antialiased;
-      /* Support for Safari and Chrome. */
-      text-rendering: optimizeLegibility;
-
-      /* Support for Firefox. */
-      -moz-osx-font-smoothing: grayscale;
-
-      /* Support for IE. */
-      font-feature-settings: 'liga';
-    }
-  }
 }
 
 /* Example Media Queries */
