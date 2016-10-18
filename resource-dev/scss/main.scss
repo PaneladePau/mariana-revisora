@@ -158,5 +158,32 @@ i {
   margin-right: 33px;
 }
 
+.footer {
+  width: 100%;
+  background-color: #e1e1e1;
+  text-align: center;
+  .container {
+    height: 100%;
+    width: 100%;
+    max-width: 940px;
+    padding: 60px 20px;
+    margin: auto;
+  }
+  h2 {
+    font-size: 24px;
+    color: #a0a0a0;
+    font-family: 'SourceSansPro Bold';
+    border-bottom: 1px solid #bababa;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  a {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 30px;
+    margin-top: 40px;
+  }
+}
+
 @import "screen-big";
 @import "screen-small";
